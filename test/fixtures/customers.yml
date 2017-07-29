@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_id: 1
+  movietheater_id: 1
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  phone: MyString
+  text_option: false
+  birthdate: 2017-07-29 17:29:17
+  password_digest: MyString
+
+two:
+  movie_id: 1
+  movietheater_id: 1
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  phone: MyString
+  text_option: false
+  birthdate: 2017-07-29 17:29:17
+  password_digest: MyString
