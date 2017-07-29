@@ -1,56 +1,70 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  get '/' => 'auditoriums#index'
+  get '/auditoriums' => 'auditoriums#index'
+  get '/auditoriums/new' => 'auditoriums#new'
+  post '/auditoriums' => 'auditoriums#create'
+  get '/auditoriums/:id' => 'auditoriums#show'
+  get '/auditoriums/:id/edit' => 'auditoriums#edit'
+  patch '/auditoriums/:id' => 'auditoriums#update'
+  delete '/auditoriums/:id' => 'auditoriums#destroy'
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  get '/' => 'customers#index'
+  get '/customers' => 'customers#index'
+  get '/customers/new' => 'customers#new'
+  post '/customers' => 'customers#create'
+  get '/customers/:id' => 'customers#show'
+  get '/customers/:id/edit' => 'customers#edit'
+  patch '/customers/:id' => 'customers#update'
+  delete '/customers/:id' => 'customers#destroy'
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get '/' => 'movies#index'
+  get '/movies' => 'movies#index'
+  get '/movies/new' => 'movies#new'
+  post '/movies' => 'movies#create'
+  get '/movies/:id' => 'movies#show'
+  get '/movies/:id/edit' => 'movies#edit'
+  patch '/movies/:id' => 'movies#update'
+  delete '/movies/:id' => 'movies#destroy'
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  get '/' => 'movietheaters#index'
+  get '/movietheaters' => 'movietheaters#index'
+  get '/movietheaters/new' => 'movietheaters#new'
+  post '/movietheaters' => 'movietheaters#create'
+  get '/movietheaters/:id' => 'movietheaters#show'
+  get '/movietheaters/:id/edit' => 'movietheaters#edit'
+  patch '/movietheaters/:id' => 'movietheaters#update'
+  delete '/movietheaters/:id' => 'movietheaters#destroy'
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  get '/' => 'seats#index'
+  get '/seats' => 'seats#index'
+  get '/seats/new' => 'seats#new'
+  post '/seats' => 'seats#create'
+  get '/seats/:id' => 'seats#show'
+  get '/seats/:id/edit' => 'seats#edit'
+  patch '/seats/:id' => 'seats#update'
+  delete '/seats/:id' => 'seats#destroy'
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  get '/' => 'showtimes#index'
+  get '/showtimes' => 'showtimes#index'
+  get '/showtimes/new' => 'showtimes#new'
+  post '/showtimes' => 'showtimes#create'
+  get '/showtimes/:id' => 'showtimes#show'
+  get '/showtimes/:id/edit' => 'showtimes#edit'
+  patch '/showtimes/:id' => 'showtimes#update'
+  delete '/showtimes/:id' => 'showtimes#destroy'
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+  get '/' => 'tickets#index'
+  get '/tickets' => 'tickets#index'
+  get '/tickets/new' => 'tickets#new'
+  post '/tickets' => 'tickets#create'
+  get '/tickets/:id' => 'tickets#show'
+  get '/tickets/:id/edit' => 'tickets#edit'
+  patch '/tickets/:id' => 'tickets#update'
+  delete '/tickets/:id' => 'tickets#destroy'
 
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
+  get '/signup' => 'users#new'
 
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 end
