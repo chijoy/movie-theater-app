@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  auditorium_id: 1
+  title: MyString
+  rating: MyString
+  female_lead: MyString
+  male_lead: MyString
+  year_released: 1
+  run_time: 1
+
+two:
+  auditorium_id: 1
+  title: MyString
+  rating: MyString
+  female_lead: MyString
+  male_lead: MyString
+  year_released: 1
+  run_time: 1
