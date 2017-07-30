@@ -17,7 +17,9 @@ class UsersController < ApplicationController
                             phone: params[:phone],
                             text_option: params[:text_option],
                             birthdate: params[:birthdate],
-                            type: params[:type]
+                            type: params[:type],
+                            password: params[:password],
+                            password_confirmation: params[:password_confirmation]
                             )
     if @user.save
       flash[:success] = "You successfully created an account!"
@@ -47,7 +49,9 @@ class UsersController < ApplicationController
                     phone: params[:phone],
                     text_option: params[:text_option],
                     birthdate: params[:birthdate],
-                    type: params[:type]
+                    type: params[:type],
+                    password: params[:password],
+                    password_confirmation: params[:password_confirmation]
                     )
     flash[:success] = "Your account information has been updated."
     redirect_to "/"
