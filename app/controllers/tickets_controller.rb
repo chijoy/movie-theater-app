@@ -9,7 +9,7 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.new(
-                        customer_id: params[:customer_id]
+                        user_id: params[:user_id]
                         )
     if @showtime.save
       flash[:success] = "You successfully created a new showtime!"
@@ -31,7 +31,7 @@ class TicketsController < ApplicationController
   def update
     @ticket = Ticket.find_by(id: params[:id])
     @ticket.update(
-                  customer_id: params[:customer_id]
+                  user_id: params[:user_id]
                   )
     flash[:success] = "Your ticket has been updated."
     redirect_to "/"
