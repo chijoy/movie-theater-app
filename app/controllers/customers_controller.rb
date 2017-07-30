@@ -14,8 +14,8 @@ class CustomersController < ApplicationController
                             first_name: params[:first_name],
                             last_name: params[:last_name],
                             email: params[:email],
-                            text_option: params[text],
-                            birthdate: params[birthdate]
+                            text_option: params[:text_option],
+                            birthdate: params[:birthdate]
                             )
     if @customer.save
       flash[:success] = "You successfully created an account!"
