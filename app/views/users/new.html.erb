@@ -1,0 +1,51 @@
+<% @user.errors.full_messages.each do |error| %>
+  <p> <%= error %> </p>
+<% end %>
+
+<hr>
+<h3>Sign Up Here</h3>
+<hr>
+
+<%= form_tag "/users", method: :post do %>
+  <div  class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :first_name, "First Name:" %>
+    <%= text_field_tag :first_name, @user.first_name, :class => "form-control" %>   
+  </div>
+  <div  class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :last_name, "Last Name:" %>
+    <%= text_field_tag :last_name, @user.last_name, :class => "form-control" %>   
+  </div>
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :email, "Email:" %>
+    <%= email_field_tag :email, @user.email, :class => "form-control" %>
+  </div>
+  <div  class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :phone, "Phone Number:" %>
+    <%= text_field_tag :phone, @user.phone, :class => "form-control" %>   
+  </div>
+  <!-- Will use for future functionality to determine senior citizen discount, adult price, or child. -->
+  <div  class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :birthdate, "Birthdate:" %>
+    <%= text_field_tag :birthdate, @user.birthdate, :class => "form-control" %>   
+  </div> 
+  <!-- Type will use for future functionality to determine customer or employee based on whether they have an employee email address -->
+
+    <%= hidden_field_tag :type, @user.type %>
+
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :password, "Password:" %>
+    <%= password_field_tag :password, nil, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :password_confirmation, "Re-Enter your Password:" %>
+    <%= password_field_tag :password_confirmation, nil, :class => "form-control"  %>
+  </div>
+  <%= submit_tag 'Sign Me Up!', :class => "btn btn-sm btn-success"  %>
+<% end %>

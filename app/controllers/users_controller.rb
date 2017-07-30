@@ -14,6 +14,7 @@ class UsersController < ApplicationController
                             first_name: params[:first_name],
                             last_name: params[:last_name],
                             email: params[:email],
+                            phone: params[:phone],
                             text_option: params[:text_option],
                             birthdate: params[:birthdate],
                             type: params[:type]
@@ -43,6 +44,7 @@ class UsersController < ApplicationController
                     first_name: params[:first_name],
                     last_name: params[:last_name],
                     email: params[:email],
+                    phone: params[:phone],
                     text_option: params[:text_option],
                     birthdate: params[:birthdate],
                     type: params[:type]

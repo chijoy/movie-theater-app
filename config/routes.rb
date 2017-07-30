@@ -62,6 +62,15 @@ Rails.application.routes.draw do
   patch '/tickets/:id' => 'tickets#update'
   delete '/tickets/:id' => 'tickets#destroy'
 
+  get '/' => 'users#index'
+  get '/users' => 'users#index'
+  get '/users/new' => 'users#new'
+  post '/users' => 'users#create'
+  get '/users/:id' => 'users#show'
+  get '/users/:id/edit' => 'users#edit'
+  patch '/users/:id' => 'users#update'
+  delete '/users/:id' => 'users#destroy'
+
   get '/signup' => 'users#new'
 
   get '/login' => 'sessions#new'
