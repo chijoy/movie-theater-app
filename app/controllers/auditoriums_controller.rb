@@ -45,9 +45,4 @@ class AuditoriumsController < ApplicationController
     flash[:success] = "Your auditorium was destroyed. :("
     redirect_to '/'
   end
-
-
-
-
-
 end
