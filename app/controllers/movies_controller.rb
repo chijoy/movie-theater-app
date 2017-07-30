@@ -37,7 +37,14 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find_by(id: params[:id])
     @movie.update(
-                  movie: params[:movie])
+                  auditorium: params[:auditorium],
+                  title: params[:title],
+                  rating: params[:last_name],
+                  female_lead: params[:female_lead],
+                  male_lead: params[:male_lead],
+                  year_release: params[:year_release],
+                  run_time: params[:run_time]
+                  )
     flash[:success] = "The movie information has been updated."
     redirect_to "/"
   end

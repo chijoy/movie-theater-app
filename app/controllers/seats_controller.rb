@@ -32,7 +32,8 @@ class SeatsController < ApplicationController
   def update
     @seat = Seat.find_by(id: params[:id])
     @seat.update(
-                  seat: params[:seat])
+                auditorium_id: params[:auditorium_id]
+                )
     flash[:success] = "The seat information has been updated."
     redirect_to "/"
   end

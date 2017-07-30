@@ -37,7 +37,14 @@ class CustomersController < ApplicationController
   def update
     @customer = Customer.find_by(id: params[:id])
     @customer.update(
-                      customer: params[:customer])
+                    movie_id: params[:movie_id],
+                    movietheater_id: params[:movietheater_id],
+                    first_name: params[:first_name],
+                    last_name: params[:last_name],
+                    email: params[:email],
+                    text_option: params[:text_option],
+                    birthdate: params[:birthdate]
+                    )
     flash[:success] = "Your account information has been updated."
     redirect_to "/"
   end

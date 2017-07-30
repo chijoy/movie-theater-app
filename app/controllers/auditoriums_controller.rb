@@ -11,8 +11,8 @@ class AuditoriumsController < ApplicationController
 
   def create
     @auditorium = Auditorium.new(
-                            movietheater_id: params[:movietheater_id]
-                            )
+                                movietheater_id: params[:movietheater_id]
+                                )
     if @auditorium.save
       flash[:success] = "Hey, you added a new auditorium!"
       redirect_to "/"
@@ -33,7 +33,8 @@ class AuditoriumsController < ApplicationController
   def update
     @auditorium = Auditorium.find_by(id: params[:id])
     @auditorium.update(
-                      auditorium: params[:auditorium])
+                      movietheater_id: params[:movietheater_id]
+                      )
     flash[:success] = "Your auditorium information has been updated."
     redirect_to "/"
   end
