@@ -23,7 +23,7 @@ class UsersController < ApplicationController
                             )
     if @user.save
       flash[:success] = "You successfully created an account!"
-      redirect_to "/"
+      redirect_to "/auditoriums"
     else
       @user.errors.full_messages
       render 'new.html.erb'
