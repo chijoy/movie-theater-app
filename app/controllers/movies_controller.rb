@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
     @movie = Movie.new(
                       auditorium: params[:auditorium],
                       title: params[:title],
-                      rating: params[:last_name],
+                      rating: params[:rating],
                       female_lead: params[:female_lead],
                       male_lead: params[:male_lead],
                       year_released: params[:year_released],
@@ -39,7 +39,7 @@ class MoviesController < ApplicationController
     @movie.update(
                   auditorium: params[:auditorium],
                   title: params[:title],
-                  rating: params[:last_name],
+                  rating: params[:rating],
                   female_lead: params[:female_lead],
                   male_lead: params[:male_lead],
                   year_released: params[:year_released],
