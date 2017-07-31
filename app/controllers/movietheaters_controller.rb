@@ -4,11 +4,19 @@ class MovietheatersController < ApplicationController
   end
 
   def new
+    @movietheater = MovieTheater.new
   end
 
   def create
-    @movietheater = Movietheater.create(
-                                        name: params[:name]
-                                        )
+    @movietheater = MovieTheater.new(
+                                    name: params[:name]
+                                    )
+    if @movietheater.save
+      flash[:success] = "You successfully added a new movietheater!"
+      redirect_to "/"
+    else
+      @movietheater.errors.full_messages
+      render 'new.html.erb'
+    end
   end
 end
