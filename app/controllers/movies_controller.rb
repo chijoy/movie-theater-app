@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
                       rating: params[:last_name],
                       female_lead: params[:female_lead],
                       male_lead: params[:male_lead],
-                      year_release: params[:year_release],
+                      year_released: params[:year_released],
                       run_time: params[:run_time]
                       )
     if @movie.save
@@ -42,7 +42,7 @@ class MoviesController < ApplicationController
                   rating: params[:last_name],
                   female_lead: params[:female_lead],
                   male_lead: params[:male_lead],
-                  year_release: params[:year_release],
+                  year_released: params[:year_released],
                   run_time: params[:run_time]
                   )
     flash[:success] = "The movie information has been updated."
