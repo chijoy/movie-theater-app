@@ -71,6 +71,15 @@ Rails.application.routes.draw do
   patch '/users/:id' => 'users#update'
   delete '/users/:id' => 'users#destroy'
 
+  get '/' => 'orders#index'
+  get '/orders' => 'orders#index'
+  get '/orders/new' => 'orders#new'
+  post '/orders' => 'orders#create'
+  get '/orders/:id' => 'orders#show'
+  get '/orders/:id/edit' => 'orders#edit'
+  patch '/orders/:id' => 'orders#update'
+  delete '/orders/:id' => 'orders#destroy'
+
   get '/signup' => 'users#new'
 
   get '/login' => 'sessions#new'
