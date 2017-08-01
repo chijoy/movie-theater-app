@@ -22,6 +22,7 @@ class UsersController < ApplicationController
                             password_confirmation: params[:password_confirmation]
                             )
     if @user.save
+      UserMailer.welcome_email(@user).deliver_later
       flash[:success] = "You successfully created an account!"
       redirect_to "/movietheaters"
     else
