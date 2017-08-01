@@ -1,14 +1,15 @@
 class MovietheatersController < ApplicationController
   # This is the client, the actual movie complex
-  def index    
+  def index 
+     @movietheaters = Movietheater.all
   end
 
   def new
-    @movietheater = MovieTheater.new
+    @movietheater = Movietheater.new
   end
 
   def create
-    @movietheater = MovieTheater.new(
+    @movietheater = Movietheater.new(
                                     name: params[:name]
                                     )
     if @movietheater.save
