@@ -1,7 +1,7 @@
 <h3>Showtimes:</a></h3>
 
 <% @showtimes.each do |showtime| %>
-  <p>ID: <%= showtime.id %></p>
+  <p>ID: <a href="/showtimes/<%= showtime.id %>"><%= showtime.id %></a></p>
   <p>Start Time: <%= showtime.start_time %></p>
   <p>End Time: <%= showtime.end_time %></p>
   <p>Show Start Date: <%= showtime.start_show_date %></p>
