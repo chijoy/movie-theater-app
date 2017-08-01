@@ -4,12 +4,7 @@
   <% movietheater.auditoriums.each do |auditorium| %>
   <h2>Showing at Auditorium: <%= auditorium.id %></h2>
     <% auditorium.movies.each do |movie| %>
-      <h3><%= movie.title %></h3>
-      <h4>Rating: <%= movie.rating %></h4>
-      <h4>Starring: <%= movie.female_lead %></h4>
-      <h4>Starring: <%= movie.male_lead %></h4>
-      <h4>Released: <%= movie.year_released %></h4>
-      <h4>Run time: <%= movie.run_time %></h4>
+      <h3><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h3>
     <% end %>
   <% end %>
 <% end %>
