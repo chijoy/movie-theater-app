@@ -1,3 +1,5 @@
+<h1>All Movies Currently Showing At The Chicago Theater</h1>
+
 <% @movies.each do |movie| %>
-  <h4><%= movie.title %></h4>
+  <h3><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h3>
 <% end %>
