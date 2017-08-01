@@ -1,1 +1,21 @@
-edit.html.erb
+<hr>
+<h1>Edit Auditorium</h1>
+<hr>
+
+<%= form_tag "/auditoriums/#{@auditorium.id}", method: :patch do %>
+  <div class="form-group">
+    <%= label_tag :id, "Auditorium ID:" %>
+    <%= number_field_tag :id, @auditorium.id, :class => "form-control" %>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <%= label_tag :seats, "Number of Seats:" %>
+    <%= number_field_tag :seats, @auditorium.seats.count, :class => "form-control" %>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <%= submit_tag "Edit Auditorium", :class => "btn btn-sm btn-success" %>
+  </div>
+<% end %>

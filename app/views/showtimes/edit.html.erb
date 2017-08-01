@@ -1,35 +1,37 @@
-<hr>
-<h1>Edit Showtime</h1>
-<hr>
+<div class="container">  
+  <hr>
+  <h1>Edit Showtime</h1>
+  <hr>
 
-<%= form_tag "/showtimes/#{@showtime.id}", method: :patch do %>
-  <div class="form-group">
-    <span class="text-danger"> * </span>
-    <%= label_tag :start_time, "Start Time:" %>
-    <%= time_field_tag :start_time, @showtime.start_time, :class => "form-control" %>
-  </div>
-  <br>
-  <div class="form-group">
-    <span class="text-danger"> * </span>
-    <%= label_tag :end_time, "End Time:" %>
-    <%= time_field_tag :end_time, @showtime.end_time, :class => "form-control" %>
-  </div>
-  <br>
+  <%= form_tag "/showtimes/#{@showtime.id}", method: :patch do %>
+    <div class="form-group">
+      <span class="text-danger"> * </span>
+      <%= label_tag :start_time, "Start Time:" %>
+      <%= time_field_tag :start_time, @showtime.start_time, :class => "form-control" %>
+    </div>
+    <br>
+    <div class="form-group">
+      <span class="text-danger"> * </span>
+      <%= label_tag :end_time, "End Time:" %>
+      <%= time_field_tag :end_time, @showtime.end_time, :class => "form-control" %>
+    </div>
+    <br>
 
-  <div class="form-group">
-    <span class="text-danger"> * </span>
-    <%= label_tag :start_show_date, "Start Date:" %>
-    <%= date_field_tag :start_show_date, @showtime.start_show_date, :class => "form-control" %>
-  </div>
-  <br>
-  <div class="form-group">
-    <span class="text-danger"> * </span>
-    <%= label_tag :end_show_date, "End Date:" %>
-    <%= date_field_tag :end_show_date, @showtime.end_show_date, :class => "form-control" %>
-  </div>
-  <br>
-  
-  <div class="form-group">
-    <%= submit_tag "Edit Showtime", :class => "btn btn-sm btn-success" %>
-  </div>
-<% end %>
+    <div class="form-group">
+      <span class="text-danger"> * </span>
+      <%= label_tag :start_show_date, "Start Date:" %>
+      <%= date_field_tag :start_show_date, @showtime.start_show_date, :class => "form-control" %>
+    </div>
+    <br>
+    <div class="form-group">
+      <span class="text-danger"> * </span>
+      <%= label_tag :end_show_date, "End Date:" %>
+      <%= date_field_tag :end_show_date, @showtime.end_show_date, :class => "form-control" %>
+    </div>
+    <br>
+    
+    <div class="form-group">
+      <%= submit_tag "Edit Showtime", :class => "btn btn-sm btn-success" %>
+    </div>
+  <% end %>
+</div>

@@ -15,7 +15,7 @@ class AuditoriumsController < ApplicationController
                                 )
     if @auditorium.save
       flash[:success] = "Hey, you added a new auditorium!"
-      redirect_to "/"
+      redirect_to "/auditoriums"
     else
       @auditorium.errors.full_messages
       render 'new.html.erb'
@@ -36,7 +36,7 @@ class AuditoriumsController < ApplicationController
                       movietheater_id: params[:movietheater_id]
                       )
     flash[:success] = "Your auditorium information has been updated."
-    redirect_to "/"
+    redirect_to "/auditoriums"
   end
 
   def destroy

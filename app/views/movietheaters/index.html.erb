@@ -1,12 +1,13 @@
-<h2>Welcome to the Movie App for The Chicago Theater!</h2>
-
-<% @movietheaters.each do |movietheater| %>
-  <% movietheater.auditoriums.each do |auditorium| %>
-  <h2>Showing at Auditorium: <%= auditorium.id %></h2>
-    <% auditorium.movies.each do |movie| %>
-      <h3><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h3>
+<div class="container">
+  <hr>
+  <h1>Welcome to the Movie App for <%= @movietheaters[0].name %>!</h1>
+  <hr>
+  <% @movietheaters.each do |movietheater| %>
+    <% movietheater.auditoriums.each do |auditorium| %>
+    <h2>Showing at Auditorium: <%= auditorium.id %></h2>
+      <% auditorium.movies.each do |movie| %>
+        <h3><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h3>
+      <% end %>
     <% end %>
   <% end %>
-<% end %>
-
-
+</div>

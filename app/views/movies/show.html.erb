@@ -1,10 +1,18 @@
-<h3><%= @movie.title %></a></h3>
-<p>Rating: <%= @movie.rating %></p>
-<p>Starring: <%= @movie.female_lead %></p>
-<p>Starring: <%= @movie.male_lead %></p>
-<p>Released: <%= @movie.year_released %></p>
-<p>Run time: <%= @movie.run_time %></p>
-<p>Auditorium: <%= @movie.auditorium.id %></p>
+<div class="container">
+  <hr>
+  <h1><%= @movie.title %></a></h1>
+  <hr>
+  <h4>Rating: <%= @movie.rating %></h4>
+  <h4>Starring: <%= @movie.female_lead %></h4>
+  <h4>Starring: <%= @movie.male_lead %></h4>
+  <h4>Released: <%= @movie.year_released %></h4>
+  <h4>Run time: <%= @movie.run_time %></h4>
+  <h4>Auditorium: <%= @movie.auditorium.id %></h4>
 
-<%= link_to "Edit", "/movies/#{@movie.id}/edit" %> |
-<%= link_to "Delete", "/movies/#{@movie.id}", method: :delete %>
+  <h2>Showing At:</h2>
+  <h4>@showtime.start_time</h4>
+
+  <%= link_to "Edit", "/movies/#{@movie.id}/edit" %> |
+  <%= link_to "Delete", "/movies/#{@movie.id}", method: :delete %>
+
+</div>

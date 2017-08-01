@@ -7,26 +7,20 @@
 <hr>
 
 <%= form_tag "/auditoriums", method: :post do %>
+  <%= hidden_field_tag :id, 1 %>
   <div class="form-group">
-    <%= label_tag :title, "Movie Theater ID:" %>
-    <%= text_area_tag :title, @question.title, :class => "form-control" %>
+    <%= label_tag :id, "Auditorium ID:" %>
+    <%= text_area_tag :id, @auditorium.id, :class => "form-control" %>
+    <%= select_tag :id, options_for_select([
+                                            4,
+                                            5,
+                                            6,
+                                            7],
+                                            @auditorium.id) %>
   </div>
   <br>
+
   <div class="form-group">
-    <span class="text-danger"> * </span>
-    <%= label_tag :title, "Question:" %>
-    <%= text_area_tag :problem, @question.problem, :class => "form-control" %>
-  </div>
-  <br>
-  <div>
-    <%= label_tag :status, "Assign Status: " %><br>
-    <%= select_tag :status, options_for_select([
-                                                "Open",
-                                                "Answered"],
-                                                @question.status) %>
-  </div>
-  <br>
-  <div class="form-group">
-    <%= submit_tag "Submit your Question", :class => "btn btn-sm btn-success" %>
+    <%= submit_tag "Create a New Auditorium", :class => "btn btn-sm btn-success" %>
   </div>
 <% end %>

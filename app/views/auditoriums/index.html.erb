@@ -1,0 +1,8 @@
+<hr>
+<h1>Auditoriums</h1>
+<hr>
+
+<% @auditoriums.each do |auditorium| %>
+  <h3><a href="/auditoriums/<%= auditorium.id %>">Auditorium #<%= auditorium.id %></a></h3>
+  <h4>Number of Seats: <%= auditorium.seats.count %></a></h4>
+<% end %>
