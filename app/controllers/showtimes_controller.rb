@@ -17,7 +17,7 @@ class ShowtimesController < ApplicationController
                             )
     if @showtime.save
       flash[:success] = "You successfully created a new showtime!"
-      redirect_to "/"
+      redirect_to "/showtimes"
     else
       @showtime.errors.full_messages
       render 'new.html.erb'
@@ -42,7 +42,7 @@ class ShowtimesController < ApplicationController
                     end_show_date: params[:end_show_date]
                     )
     flash[:success] = "Your showtime has been updated."
-    redirect_to "/"
+    redirect_to "/showtimes"
   end
 
   def destroy
@@ -50,6 +50,6 @@ class ShowtimesController < ApplicationController
     @showtime.destroy
 
     flash[:success] = "Your showtime was deleted. :("
-    redirect_to '/'
+    redirect_to '/showtimes'
   end
 end

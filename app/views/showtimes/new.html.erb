@@ -10,30 +10,30 @@
   <div class="form-group">
     <span class="text-danger"> * </span>
     <%= label_tag :start_time, "Start Time:" %>
-    <%= form.date_field :start_time, @showtime.start_time, :class => "form-control" %>
+    <%= time_field_tag :start_time, @showtime.start_time, :class => "form-control" %>
   </div>
   <br>
   <div class="form-group">
     <span class="text-danger"> * </span>
-    <%= label_tag :end_time, "Female Lead:" %>
-    <%= form.date_field :end_time, @movie.end_time, :class => "form-control" %>
+    <%= label_tag :end_time, "End Time:" %>
+    <%= time_field_tag :end_time, @showtime.end_time, :class => "form-control" %>
   </div>
   <br>
 
   <div class="form-group">
     <span class="text-danger"> * </span>
     <%= label_tag :start_show_date, "Start Date:" %>
-    <%= form.date_field :start_show_date, @showtime.start_show_date, :class => "form-control" %>
+    <%= date_field_tag :start_show_date, @showtime.start_show_date, :class => "form-control" %>
   </div>
   <br>
   <div class="form-group">
     <span class="text-danger"> * </span>
-    <%= label_tag :end_show_date, "Female Lead:" %>
-    <%= form.date_field :end_show_date, @movie.end_show_date, :class => "form-control" %>
+    <%= label_tag :end_show_date, "End Date:" %>
+    <%= date_field_tag :end_show_date, @showtime.end_show_date, :class => "form-control" %>
   </div>
   <br>
   
   <div class="form-group">
-    <%= submit_tag "Add a New Movie", :class => "btn btn-sm btn-success" %>
+    <%= submit_tag "Add a New Showtime", :class => "btn btn-sm btn-success" %>
   </div>
 <% end %>
