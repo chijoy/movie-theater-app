@@ -5,3 +5,6 @@
 <p>Released: <%= @movie.year_released %></p>
 <p>Run time: <%= @movie.run_time %></p>
 <p>Auditorium: <%= @movie.auditorium.id %></p>
+
+<%= link_to "Edit", "/movies/#{@movie.id}/edit" %> |
+<%= link_to "Delete", "/movies/#{@movie.id}", method: :delete %>

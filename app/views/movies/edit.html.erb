@@ -1,1 +1,60 @@
-edit.html.erb
+<hr>
+<h1>Edit New Movie</h1>
+<hr>
+
+<%= form_tag "/movies", method: :patch do %>
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :auditorium_id, "Auditorium" %>
+    <%= select_tag :auditorium_id, options_for_select([
+                                                      1,
+                                                      2,
+                                                      3],
+                                                      @movie.auditorium_id) %>
+  </div>
+  <br>
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :title, "Movie Title:" %>
+    <%= text_area_tag :title, @movie.title, :class => "form-control" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :rating, "Movie Rating:" %>
+    <%= select_tag :rating, options_for_select([
+                                                "G",
+                                                "PG",
+                                                "PG-13",
+                                                "R"],
+                                                @movie.rating) %>
+  </div>
+  <br>
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :female_lead, "Female Lead:" %>
+    <%= text_area_tag :female_lead, @movie.female_lead, :class => "form-control" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :male_lead, "Male Lead:" %>
+    <%= text_area_tag :male_lead, @movie.male_lead, :class => "form-control" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :year_released, "Year Released:" %>
+    <%= text_area_tag :year_released, @movie.year_released, :class => "form-control" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :run_time, "Run Time:" %>
+    <%= text_area_tag :run_time, @movie.run_time, :class => "form-control" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= submit_tag "Edit Movie", :class => "btn btn-sm btn-success" %>
+  </div>
+<% end %>
