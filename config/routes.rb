@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/' => 'auditoriums#index'
+
   get '/auditoriums' => 'auditoriums#index'
   get '/auditoriums/new' => 'auditoriums#new'
   post '/auditoriums' => 'auditoriums#create'
@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   patch '/auditoriums/:id' => 'auditoriums#update'
   delete '/auditoriums/:id' => 'auditoriums#destroy'
 
-  get '/' => 'customers#index'
   get '/customers' => 'customers#index'
   get '/customers/new' => 'customers#new'
   post '/customers' => 'customers#create'
@@ -17,7 +16,6 @@ Rails.application.routes.draw do
   patch '/customers/:id' => 'customers#update'
   delete '/customers/:id' => 'customers#destroy'
 
-  get '/' => 'movies#index'
   get '/movies' => 'movies#index'
   get '/movies/new' => 'movies#new'
   post '/movies' => 'movies#create'
@@ -35,7 +33,6 @@ Rails.application.routes.draw do
   patch '/movietheaters/:id' => 'movietheaters#update'
   delete '/movietheaters/:id' => 'movietheaters#destroy'
 
-  get '/' => 'seats#index'
   get '/seats' => 'seats#index'
   get '/seats/new' => 'seats#new'
   post '/seats' => 'seats#create'
@@ -44,7 +41,6 @@ Rails.application.routes.draw do
   patch '/seats/:id' => 'seats#update'
   delete '/seats/:id' => 'seats#destroy'
 
-  get '/' => 'showtimes#index'
   get '/showtimes' => 'showtimes#index'
   get '/showtimes/new' => 'showtimes#new'
   post '/showtimes' => 'showtimes#create'
@@ -53,7 +49,6 @@ Rails.application.routes.draw do
   patch '/showtimes/:id' => 'showtimes#update'
   delete '/showtimes/:id' => 'showtimes#destroy'
 
-  get '/' => 'tickets#index'
   get '/tickets' => 'tickets#index'
   get '/tickets/new' => 'tickets#new'
   post '/tickets' => 'tickets#create'
@@ -62,7 +57,6 @@ Rails.application.routes.draw do
   patch '/tickets/:id' => 'tickets#update'
   delete '/tickets/:id' => 'tickets#destroy'
 
-  get '/' => 'users#index'
   get '/users' => 'users#index'
   get '/users/new' => 'users#new'
   post '/users' => 'users#create'
@@ -71,7 +65,6 @@ Rails.application.routes.draw do
   patch '/users/:id' => 'users#update'
   delete '/users/:id' => 'users#destroy'
 
-  get '/' => 'orders#index'
   get '/orders' => 'orders#index'
   get '/orders/new' => 'orders#new'
   post '/orders' => 'orders#create'
