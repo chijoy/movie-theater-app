@@ -57,26 +57,26 @@ Movie.create(
 
 Showtime.create(
                 movie_id: 1,
-                start_time: 2017-08-01 14:00:00,
-                end_time: 2017-08-01 16:00:00,
-                start_show_date: 2017-09-01 00:00:00,
-                end_show_date: 2017-09-29 00:00:00
+                start_time: DateTime.strptime("14:00", "%H:%M"),
+                end_time: DateTime.strptime("16:00", "%H:%M"),
+                start_show_date: DateTime.new(2017, 9, 1),
+                end_show_date: DateTime.new(2017, 9, 29)
                 )
 
 Showtime.create(
                 movie_id: 2,
-                start_time: 2017-08-01 20:00:00,
-                end_time: 2017-08-01 23:00:00,
-                start_show_date: 2017-09-01 00:00:00,
-                end_show_date: 2017-09-29 00:00:00
+                start_time: DateTime.strptime("20:00", "%H:%M"),
+                end_time: DateTime.strptime("23:00", "%H:%M"),
+                start_show_date: DateTime.new(2017, 9, 1),
+                end_show_date: DateTime.new(2017, 9, 29)
                 )
 
 Showtime.create(
                 movie_id: 3,
-                start_time: 2017-08-01 19:00:00,
-                end_time: 2017-08-01 21:30:00,
-                start_show_date: 2017-09-01 00:00:00,
-                end_show_date: 2017-09-29 00:00:00
+                start_time: DateTime.strptime("19:00", "%H:%M"),
+                end_time: DateTime.strptime("21:30", "%H:%M"),
+                start_show_date: DateTime.new(2017, 9, 1),
+                end_show_date: DateTime.new(2017, 9, 29)
                 )
 
 User.create(
@@ -85,7 +85,7 @@ User.create(
             last_name: "admin",
             email: "admin@gmail.com",
             phone: "773-555-1212",
-            birthdate: 2000-01-01 00:00:00,
+            birthdate: DateTime.new(2000, 1, 1),
             password_digest: "password",
             user_type: "Admin"
             )
@@ -96,7 +96,7 @@ User.create(
             last_name: "customer",
             email: "firstcustomer@gmail.com",
             phone: "773-555-1213",
-            birthdate: 2000-01-01 00:00:00,
+            birthdate: DateTime.new(2000, 1, 1),
             password_digest: "password",
             user_type: "Customer"
             )
@@ -107,7 +107,7 @@ User.create(
             last_name: "employee",
             email: "firstemployee@gmail.com",
             phone: "773-555-1213",
-            birthdate: 2000-01-01 00:00:00,
+            birthdate: DateTime.new(2000, 1, 1),
             password_digest: "password",
             user_type: "Employee"
             )
