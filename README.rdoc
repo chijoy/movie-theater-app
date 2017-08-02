@@ -2,7 +2,7 @@
 
 Movie Theater Code Challenge for Launchpad Labs
 
-Requirements 
+Requirements: 
 * Client should be able to add auditoriums
 * Add seating capacities. 
 * See all movies playing 
@@ -20,7 +20,7 @@ Requirements
 * Client wants to see a list of all orders 
 * See a list of orders for each movie. No need for authentication on the app for now.
 
-see your thought processes in the app's Readme file
+TODO:
 
 - Create controller, model, and views for movietheater (the theater itself)
 - There is one movietheater, has many auditoriums
