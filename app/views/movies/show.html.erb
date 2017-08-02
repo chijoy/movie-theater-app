@@ -10,7 +10,13 @@
   <h4>Auditorium: <%= @movie.auditorium.id %></h4>
 
   <h2>Showing At:</h2>
-  <h4></h4>
+  <br>
+  
+  <h4>Limit One Ticker Per Order</h4>
+
+  <%= form_tag "/orders", method: :post do %>
+    <%= submit_tag "Buy Now", class: "btn btn-primary" %>
+  <% end %>
 
   <%= link_to "Edit", "/movies/#{@movie.id}/edit" %> |
   <%= link_to "Delete", "/movies/#{@movie.id}", method: :delete %>

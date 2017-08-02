@@ -17,7 +17,7 @@ class OrdersController < ApplicationController
                     total: params[:total],
                     )
     if @order.save
-      flash[:success] = "You added another order!"
+      flash[:success] = "Your order for a ticket was successful!"
       redirect_to "/"
     else
       @order.errors.full_messages
