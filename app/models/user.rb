@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
-  belongs_to :movie
   belongs_to :movietheater
   has_many :tickets
+  has_many :orders
 
   has_secure_password
 

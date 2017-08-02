@@ -9,19 +9,16 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(
-                    movie_id: params[:movie_id],
-                    movietheater_id: params[:movietheater_id],
                     first_name: params[:first_name],
                     last_name: params[:last_name],
                     email: params[:email],
                     phone: params[:phone],
-                    text_option: params[:text_option],
                     birthdate: params[:birthdate],
                     type: params[:type],
                     password: params[:password],
                     password_confirmation: params[:password_confirmation]
                     )
-    
+
     if @user.save
       UserMailer.welcome_email(@user).deliver_later
       flash[:success] = "You successfully created an account!"
@@ -47,7 +44,6 @@ class UsersController < ApplicationController
                 last_name: params[:last_name],
                 email: params[:email],
                 phone: params[:phone],
-                text_option: params[:text_option],
                 birthdate: params[:birthdate],
                 type: params[:type]
                 )

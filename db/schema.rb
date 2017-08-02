@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170801020143) do
+ActiveRecord::Schema.define(version: 20170802033649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,25 +22,25 @@ ActiveRecord::Schema.define(version: 20170801020143) do
     t.datetime "updated_at",      null: false
   end
 
-  # create_table "customers", force: :cascade do |t|
-  #   t.integer  "movie_id"
-  #   t.integer  "movietheater_id"
-  #   t.string   "first_name"
-  #   t.string   "last_name"
-  #   t.string   "email"
-  #   t.string   "phone"
-  #   t.boolean  "text_option"
-  #   t.datetime "birthdate"
-  #   t.string   "password_digest"
-  #   t.datetime "created_at",      null: false
-  #   t.datetime "updated_at",      null: false
-  # end
+  create_table "customers", force: :cascade do |t|
+    t.integer  "movie_id"
+    t.integer  "movietheater_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone"
+    t.boolean  "text_option"
+    t.datetime "birthdate"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
-  # create_table "movie_theaters", force: :cascade do |t|
-  #   t.string   "name"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  # end
+  create_table "movie_theaters", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "movies", force: :cascade do |t|
     t.integer  "auditorium_id"
@@ -93,13 +93,11 @@ ActiveRecord::Schema.define(version: 20170801020143) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer  "movie_id"
     t.integer  "movietheater_id"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.string   "phone"
-    t.boolean  "text_option"
     t.datetime "birthdate"
     t.string   "password_digest"
     t.string   "type"
