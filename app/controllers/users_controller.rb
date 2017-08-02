@@ -14,7 +14,7 @@ class UsersController < ApplicationController
                     email: params[:email],
                     phone: params[:phone],
                     birthdate: params[:birthdate],
-                    type: params[:type],
+                    user_type: params[:user_type],
                     password: params[:password],
                     password_confirmation: params[:password_confirmation]
                     )
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
                 email: params[:email],
                 phone: params[:phone],
                 birthdate: params[:birthdate],
-                type: params[:type]
+                user_type: params[:user_type]
                 )
 
     flash[:success] = "Your account information has been updated."

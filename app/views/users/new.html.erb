@@ -33,9 +33,9 @@
     <%= label_tag :birthdate, "Birthdate:" %>
     <%= date_field_tag :birthdate, @user.birthdate, :class => "form-control" %>   
   </div> 
-  <!-- Type will use for future functionality to determine customer or employee based on whether they have an employee email address -->
+  <!-- User type will use for future functionality to determine customer or employee based on whether they have an employee email address -->
 
-    <%= hidden_field_tag :type, @user.type %>
+    <%= hidden_field_tag :user_type, @user.user_type %>
 
   <div class="form-group">
     <span class="text-danger"> * </span>

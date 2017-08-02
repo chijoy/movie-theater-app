@@ -35,7 +35,7 @@ TODO:
 - Create controller, model, and views for showtimes
 - Showtimes belong to movies
 - Create controller, model, and views for users
-- Users have a type to determine customer, employee, or admin
+- Users have a user_type to determine customer, employee, or admin
 - Users have many tickets (limit one for each movie), and have many orders
 - Create controller, model, and views for tickets
 - Tickets belong to users

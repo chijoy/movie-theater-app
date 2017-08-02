@@ -33,13 +33,13 @@
   
   <div  class="form-group">
     <span class="text-danger"> * </span>
-    <%= label_tag :type, "Type:" %>
+    <%= label_tag :user_type, "User Type:" %>
     <br>
-    <%= select_tag :type, options_for_select([
+    <%= select_tag :user_type, options_for_select([
                                               "Customer",
                                               "Employee",
                                               "Admin"],
-                                              @user.type) %> 
+                                              @user.user_type) %> 
   </div>
   <%= submit_tag 'Update User', :class => "btn btn-sm btn-success"  %>
 <% end %>
