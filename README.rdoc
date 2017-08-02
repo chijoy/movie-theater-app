@@ -1,28 +1,47 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Movie Theater Code Challenge for Launchpad Labs
 
-Things you may want to cover:
+Requirements 
+* Client should be able to add auditoriums
+* Add seating capacities. 
+* See all movies playing 
+* See movies with their showtimes. 
+* Seating is limited for each theater so a particular showtime should only have a limited number of seats. 
+* Once a show sells out, a customer should no longer be able to buy tickets. 
+* Customers should only be able to buy one ticket at a time so don't worry about a shopping cart for this version.
+* When customers decide to buy their ticket, they should be able to checkout by entering their name, email, credit card, and expiration date.
+* validations on orders
+* error messages for user if there's a problem with the order
+# DO NOT integrate with a credit card processor 
+* Once the customer purchases their tickets, they should receive an email receipt.
+* Client should be able to set which movie is showing in which auditorium.
+* Order information should be saved to the database to track sales
+* Client wants to see a list of all orders 
+* See a list of orders for each movie. No need for authentication on the app for now.
 
-* Ruby version
+see your thought processes in the app's Readme file
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- Create controller, model, and views for movietheater (the theater itself)
+- There is one movietheater, has many auditoriums
+- Create controller, model, and views for auditoriums (the separate theaters within the theater)
+- Auditoriums belong to movietheater and has many seats and has many movies
+- Create controller, model, and views for seats
+- Seats belong auditoriums
+- Create controller, model, and views for movies
+- Movies belong to auditorium, and have many showtimes
+- Create controller, model, and views for showtimes
+- Showtimes belong to movies
+- Create controller, model, and views for users
+- Users have a type to determine customer, employee, or admin
+- Users have many tickets (limit one for each movie), and have many orders
+- Create controller, model, and views for tickets
+- Tickets belong to users
+- Create controller, model, and views for orders
+- Orders belong to movietheater and belong to user
+- Add routes, actions to controllers, and add to views
+- Add validations based on required fields on views
+- Add bootstrap for navbar and some formatting
+- Add ability to buy ticket
+- Add logic to restrict ability to buy ticket based on total number of seats less seats sold
+- Add email confirmation for ticket purchase
