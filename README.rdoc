@@ -45,3 +45,4 @@ see your thought processes in the app's Readme file
 - Add ability to buy ticket
 - Add logic to restrict ability to buy ticket based on total number of seats less seats sold
 - Add email confirmation for ticket purchase
+- Push to heroku
