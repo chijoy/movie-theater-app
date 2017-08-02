@@ -1,12 +1,11 @@
 <div class="container">
-<h3>Showtime:</a></h3>
+<h3>Showtime:</h3>
 
   <p>ID: <%= @showtime.id %></p>
   <p>Start Time: <%= @showtime.start_time %></p>
   <p>End Time: <%= @showtime.end_time %></p>
   <p>Show Start Date: <%= @showtime.start_show_date %></p>
   <p>Show End Date: <%= @showtime.end_show_date %></p>
-
 
   <%= link_to "Edit", "/showtimes/#{@showtime.id}/edit" %> |
   <%= link_to "Delete", "/showtimes/#{@showtime.id}", method: :delete %>

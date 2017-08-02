@@ -1,7 +1,10 @@
-<h1>All Movies Currently Showing At The Chicago Theater</h1>
-
-<% @movies.each do |movie| %>
-  <h3><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h3>
-<% end %>
-
-<h2>Showtimes:</h2>
+<div class="container">
+  <hr>
+  <h1>Movies</h1>
+  <hr>
+  <% @movies.each do |movie| %>
+    <h3><a href="/movies/<%= movie.id %>"><%= movie.title %></a></h3>
+  <% end %>
+  <br>
+  <%= link_to "Add a New Movie", "/movies/new" %>
+</div>

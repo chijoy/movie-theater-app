@@ -2,25 +2,21 @@
   <p> <%= error %> </p>
 <% end %>
 
-<hr>
-<h1>New Auditorium</h1>
-<hr>
+<div class="container">
+  <hr>
+  <h1>Add a New Auditorium</h1>
+  <hr>
 
-<%= form_tag "/auditoriums", method: :post do %>
-  <%= hidden_field_tag :id, 1 %>
-  <div class="form-group">
-    <%= label_tag :id, "Auditorium ID:" %>
-    <%= text_area_tag :id, @auditorium.id, :class => "form-control" %>
-    <%= select_tag :id, options_for_select([
-                                            4,
-                                            5,
-                                            6,
-                                            7],
-                                            @auditorium.id) %>
-  </div>
-  <br>
+  <%= form_tag "/auditoriums", method: :post do %>
+    <%= hidden_field_tag :id, 1 %>
+    <div class="form-group">
+      <%= label_tag :id, "Auditorium ID:" %>
+      <%= number_field_tag :id, @auditorium.id, :class => "form-control" %>
+    </div>
+    <br>
 
-  <div class="form-group">
-    <%= submit_tag "Create a New Auditorium", :class => "btn btn-sm btn-success" %>
-  </div>
-<% end %>
+    <div class="form-group">
+      <%= submit_tag "Create a New Auditorium", :class => "btn btn-sm btn-success" %>
+    </div>
+  <% end %>
+</div>

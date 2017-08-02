@@ -9,22 +9,23 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(
-                            movie_id: params[:movie_id],
-                            movietheater_id: params[:movietheater_id],
-                            first_name: params[:first_name],
-                            last_name: params[:last_name],
-                            email: params[:email],
-                            phone: params[:phone],
-                            text_option: params[:text_option],
-                            birthdate: params[:birthdate],
-                            type: params[:type],
-                            password: params[:password],
-                            password_confirmation: params[:password_confirmation]
-                            )
+                    movie_id: params[:movie_id],
+                    movietheater_id: params[:movietheater_id],
+                    first_name: params[:first_name],
+                    last_name: params[:last_name],
+                    email: params[:email],
+                    phone: params[:phone],
+                    text_option: params[:text_option],
+                    birthdate: params[:birthdate],
+                    type: params[:type],
+                    password: params[:password],
+                    password_confirmation: params[:password_confirmation]
+                    )
+    
     if @user.save
       UserMailer.welcome_email(@user).deliver_later
       flash[:success] = "You successfully created an account!"
-      redirect_to "/movietheaters"
+      redirect_to "/users"
     else
       @user.errors.full_messages
       render 'new.html.erb'
@@ -42,20 +43,17 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     @user.update(
-                    movie_id: params[:movie_id],
-                    movietheater_id: params[:movietheater_id],
-                    first_name: params[:first_name],
-                    last_name: params[:last_name],
-                    email: params[:email],
-                    phone: params[:phone],
-                    text_option: params[:text_option],
-                    birthdate: params[:birthdate],
-                    type: params[:type],
-                    password: params[:password],
-                    password_confirmation: params[:password_confirmation]
-                    )
+                first_name: params[:first_name],
+                last_name: params[:last_name],
+                email: params[:email],
+                phone: params[:phone],
+                text_option: params[:text_option],
+                birthdate: params[:birthdate],
+                type: params[:type]
+                )
+
     flash[:success] = "Your account information has been updated."
-    redirect_to "/"
+    redirect_to "/users"
   end
 
   def destroy

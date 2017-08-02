@@ -31,7 +31,7 @@
   <div  class="form-group">
     <span class="text-danger"> * </span>
     <%= label_tag :birthdate, "Birthdate:" %>
-    <%= text_field_tag :birthdate, @user.birthdate, :class => "form-control" %>   
+    <%= date_field_tag :birthdate, @user.birthdate, :class => "form-control" %>   
   </div> 
   <!-- Type will use for future functionality to determine customer or employee based on whether they have an employee email address -->
 

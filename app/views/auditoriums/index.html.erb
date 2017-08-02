@@ -1,8 +1,12 @@
-<hr>
-<h1>Auditoriums</h1>
-<hr>
+<div class="container">
+  <hr>
+  <h1>Auditoriums</h1>
+  <hr>
 
-<% @auditoriums.each do |auditorium| %>
-  <h3><a href="/auditoriums/<%= auditorium.id %>">Auditorium #<%= auditorium.id %></a></h3>
-  <h4>Number of Seats: <%= auditorium.seats.count %></a></h4>
-<% end %>
+  <% @auditoriums.each do |auditorium| %>
+    <h3><a href="/auditoriums/<%= auditorium.id %>">Auditorium #<%= auditorium.id %></a></h3>
+    <h4>Number of Seats: <%= auditorium.seats.count %></a></h4>
+  <% end %>
+  <br>
+  <%= link_to "Add a New Auditorium", "/auditoriums/new" %>
+</div>

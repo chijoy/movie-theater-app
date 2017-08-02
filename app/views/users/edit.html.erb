@@ -1,1 +1,54 @@
-edit.html.erb
+<div class="container">  
+  <hr>
+  <h1>Edit User</h1>
+  <hr>
+
+  <%= form_tag "/users/#{@user.id}", method: :patch do %>
+  <div  class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :first_name, "First Name:" %>
+    <%= text_field_tag :first_name, @user.first_name, :class => "form-control" %>   
+  </div>
+  <div  class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :last_name, "Last Name:" %>
+    <%= text_field_tag :last_name, @user.last_name, :class => "form-control" %>   
+  </div>
+  <div class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :email, "Email:" %>
+    <%= email_field_tag :email, @user.email, :class => "form-control" %>
+  </div>
+  <div  class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :phone, "Phone Number:" %>
+    <%= text_field_tag :phone, @user.phone, :class => "form-control" %>   
+  </div>
+  <div  class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :text_option, "Text Option:" %>
+    <br>
+    <%= select_tag :text_option, options_for_select([
+                                              "Yes",
+                                              "No"],
+                                              @user.text_option) %> 
+  </div>
+  <!-- Will use for future functionality to determine senior citizen discount, adult price, or child. -->
+  <div  class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :birthdate, "Birthdate:" %>
+    <%= date_field_tag :birthdate, @user.birthdate.strftime("%m/%d/%Y"), :class => "form-control" %>   
+  </div> 
+  
+  <div  class="form-group">
+    <span class="text-danger"> * </span>
+    <%= label_tag :type, "Type:" %>
+    <br>
+    <%= select_tag :type, options_for_select([
+                                              "Customer",
+                                              "Employee",
+                                              "Admin"],
+                                              @user.type) %> 
+  </div>
+  <%= submit_tag 'Update User', :class => "btn btn-sm btn-success"  %>
+<% end %>

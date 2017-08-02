@@ -1,1 +1,12 @@
-index.html.erb
+<div class="container">
+  <hr>
+  <h1>Users</h1>
+  <hr>
+  <% @users.each do |user| %>
+    <h3><a href="/users/<%= user.id %>"><%= user.first_name %> <a href="/users/<%= user.id %>"><%= user.last_name %></a></h3>
+    <h4><%= user.email %></h4>
+    <h4><%= user.phone %></h4>    
+  <% end %>
+  <br>
+  <%= link_to "Add a New User", "/users/new" %>
+</div>
