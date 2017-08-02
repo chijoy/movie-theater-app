@@ -2,6 +2,8 @@
 
 Movie Theater Code Challenge for Launchpad Labs
 
+Available on heroku at: https://movietheaterapp.herokuapp.com/
+
 Requirements: 
 * Client should be able to add auditoriums
 * Add seating capacities. 

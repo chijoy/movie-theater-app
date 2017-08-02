@@ -1,1 +1,10 @@
-show.html.erb
+<div class="container">
+  <hr>
+  <h1><%= @order.id %></a></h1>
+  <hr>
+  <h4><%= @order.users.first_name %></h4>
+
+  <%= link_to "Edit", "/orders/#{@order.id}/edit" %> |
+  <%= link_to "Delete", "/orders/#{@order.id}", method: :delete %>
+
+</div>
